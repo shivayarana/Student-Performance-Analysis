@@ -123,3 +123,172 @@ Key Findings
 Conclusion
 
 This project provided an opportunity to work with a real-world dataset and apply Python libraries for data analysis and visualization. The analysis helped identify patterns in student scores and explore relationships between academic performance and other student attributes.
+
+
+## Project Installation & Running Guide
+
+This guide explains how to install dependencies and run the Student Performance Analysis project on Windows and Linux (Fedora).
+
+---
+
+## 1. PROJECT REQUIREMENTS
+
+- Internet connection (for first-time setup)
+- Windows or Linux (Fedora)
+- Git (optional, if cloning from GitHub)
+
+The setup scripts automatically create a Python virtual environment and install the required libraries.
+
+## 2. WINDOWS SETUP
+
+### Steps to Run
+
+1. Download or clone the project repository.
+2. Extract the ZIP file if downloaded.
+3. Open the `Student-Performance-Analysis` folder.
+4. Make sure `run.bat` and `requirements.txt` are present.
+5. Double-click `run.bat`.
+
+### What Happens Automatically?
+
+- Checks whether Python is installed.
+- Attempts to install Python using WinGet if missing.
+- Creates a `.venv` virtual environment.
+- Installs all dependencies from `requirements.txt`.
+- Launches Jupyter Notebook.
+
+**Important:** If Python is installed during the first run, close the terminal and execute `run.bat` again.
+
+### Run Using Command Prompt (Alternative)
+
+Open Command Prompt inside the project folder and execute:
+
+```cmd
+run.bat
+```
+
+---
+
+## 3. LINUX SETUP (FEDORA)
+
+### Steps to Run
+
+1. Download or clone the project repository.
+2. Extract the ZIP file.
+3. Open the project folder in Terminal.
+4. Give execution permission to the setup script:
+
+```bash
+chmod +x run.sh
+```
+
+5. Execute the script:
+
+```bash
+./run.sh
+```
+
+### What Happens Automatically?
+
+- Checks whether Python 3 is installed.
+- Attempts to install Python using DNF if missing.
+- Creates a `.venv` virtual environment.
+- Installs all dependencies from `requirements.txt`.
+- Launches Jupyter Notebook.
+
+**Note:** The script may ask for your Linux password when installing Python through DNF.
+
+---
+
+## 4. REQUIRED PYTHON LIBRARIES
+
+The following dependencies are installed automatically:
+
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+
+No separate manual installation of these libraries is required.
+
+---
+
+## 5. OPEN THE PROJECT NOTEBOOK
+
+After Jupyter Notebook launches:
+
+1. Open the `notebooks` folder.
+2. Select `student_analysis.ipynb`.
+3. Click **Run All** to execute the complete analysis.
+4. View the generated outputs and visualizations.
+
+---
+
+## 6. PROJECT STRUCTURE
+
+```text
+Student-Performance-Analysis/
+│
+├── dataset/
+│   └── StudentsPerformance.csv
+│
+├── notebooks/
+│   └── student_analysis.ipynb
+│
+├── visualizations/
+│
+├── requirements.txt
+├── run.bat
+├── run.sh
+├── README.md
+├── HOW_TO_RUN.txt
+└── .gitignore
+```
+
+---
+
+## 7. TROUBLESHOOTING
+
+**Problem: requirements.txt not found**
+
+Make sure `requirements.txt` is located in the main project folder, alongside `run.bat` and `run.sh`.
+
+**Problem: Permission denied on Linux**
+
+Execute:
+
+```bash
+chmod +x run.sh
+```
+
+**Problem: Python not found on Windows**
+
+Make sure WinGet is available or install Python manually. Restart the terminal and run the script again.
+
+**Problem: Dependencies fail to install**
+
+Check your internet connection and try running the setup script again.
+
+**Problem: Dataset file not found**
+
+Make sure `StudentsPerformance.csv` exists inside the `dataset` folder. If the notebook is inside `notebooks/`, its relative dataset path should be:
+
+```python
+../dataset/StudentsPerformance.csv
+```
+
+---
+
+## 8. IMPORTANT NOTES
+
+- Do not delete `requirements.txt`, `run.bat`, or `run.sh`.
+- The `.venv` folder is created automatically.
+- Do not upload or share the `.venv` folder.
+- Internet access is required for first-time dependency installation.
+- Python installation may require administrator permissions.
+- Use `run.bat` on Windows and `run.sh` on Fedora/Linux.
+
+---
+
+**Enjoy exploring Student Performance Analysis!**
